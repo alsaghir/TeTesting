@@ -20,6 +20,7 @@ public class Bean implements BeanInt {
 		System.out.println("Hello this is a bean test");
 	}
 	
+	
 	@Override
 	public List getEntities() {
 		Session session = factory.openSession();
