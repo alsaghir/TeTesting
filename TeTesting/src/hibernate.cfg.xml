@@ -4,16 +4,25 @@
 
 <hibernate-configuration>
    <session-factory>
-   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-   <property name="hibernate.connection.url">jdbc:mysql://localhost/tetestdb</property>
-   <property name="hibernate.connection.username">root</property>
+  
+   <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+   <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+   <property name="hibernate.connection.url">jdbc:derby:C:\Users\Delta\git\tetesting\TeTesting\WebContent\testingdb;create=true</property>
+   <property name="hibernate.connection.username"></property>
    <property name="hibernate.connection.password"></property>
    <property name="hibernate.connection.pool_size">10</property>
    <property name="hibernate.show_sql">true</property>
    <property name="hibernate.current_session_context_class">thread</property>
-
    <mapping resource="entitytata.hbm.xml"/>
+
+   <!--
+   To creat tables automatically first time
+   <property name="hibernate.hbm2ddl.auto">create</property>
+   
+   For mysql database
+   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+   <property name="hibernate.connection.url">jdbc:mysql://localhost/tetestdb</property>-->
 
 </session-factory>
 </hibernate-configuration>
