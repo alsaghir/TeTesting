@@ -39,6 +39,7 @@ public class Bean implements BeanInt {
 		return entityList;
 	}
 	
+	
 	@Override
 	public Entity addEntity(Entity newEntity) {
 		Session session = factory.openSession();
